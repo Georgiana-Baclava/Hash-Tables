@@ -7,7 +7,6 @@ package map;
 public interface Key extends Comparable<Key>{
     
     @Override
-    //TODO obligatoriu de implementat propriul hash
     public int hashCode();
     
     public String getKey();

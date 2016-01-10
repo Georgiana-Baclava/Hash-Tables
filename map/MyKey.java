@@ -12,7 +12,6 @@ public class MyKey implements Key {
 		for (int i = 0; i < cheie.length(); i++)
 			s += cheie.charAt(i);
 		hash = s%cheie.length();
-		//System.out.println("s= " +s+"hash= "+hash);
 		return hash;
 	}
 

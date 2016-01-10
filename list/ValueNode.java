@@ -6,14 +6,11 @@ import map.MyValue;
 public class ValueNode implements Node{
 	protected ValueNode next;
 	protected ValueNode prev;
-	//public String value = "";
 	MyValue value;
 	public int no;
 	
 	
-	public ValueNode() {
-		
-	}
+	public ValueNode() {}
 
 	public ValueNode(MyValue value) {
 		this.value = value;
@@ -33,8 +30,6 @@ public class ValueNode implements Node{
 
 	public void setNext(Node node) {
 		next = (ValueNode)node;
-		//((ValueNode)node).prev = next;
-
 	}
 
 	public void setPrev(Node node) {

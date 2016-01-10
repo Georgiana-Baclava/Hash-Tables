@@ -5,10 +5,9 @@ import map.MyKey;
 
 public class ValueList extends AbstractList {
 	
-	//public MyKey key;//constr gol
 	protected ValueNode first;
-    protected ValueNode last;
-	public ValueNode node = new ValueNode();//tre constr gol
+    	protected ValueNode last;
+	public ValueNode node = new ValueNode();
 	
 	public ValueList() {
 		first = null;
@@ -73,7 +72,6 @@ public class ValueList extends AbstractList {
 			node.setNext(null);
 			last = node;
 		}
-		// size++;
 	}
 
 
@@ -102,15 +100,14 @@ public class ValueList extends AbstractList {
 			((ValueNode) node).setPrev(null);
 			((ValueNode) node).setNext(null);
 		}
-		// size--;
 	}
 
 	public String toString() {
-		System.out.println("a");
 		String result = "";
 		ValueNode current = first;
-		if(current == null) {System.out.println("caca");
-			return("null");}
+		if(current == null) {
+			return("null");
+		}
 		while(current != null) {
 			result += "(" + current.value.getVal() + ", " + current.no + ") ";
 			current = current.getNext();

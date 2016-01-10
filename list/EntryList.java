@@ -3,10 +3,10 @@ package list;
 import map.MyKey;
 
 public class EntryList extends AbstractList{
-	//public MyKey key;//constr gol
+	
 	protected EntryNode first;
-    protected EntryNode last;
-		public EntryNode node = new EntryNode();//tre constr gol
+        protected EntryNode last;
+		public EntryNode node = new EntryNode();
 		
 		public EntryList() {
 			first = null;
@@ -24,7 +24,7 @@ public class EntryList extends AbstractList{
 		}
 
 		public EntryNode getFirstEqual(Object value) {
-			EntryNode current = first;//ce pun?
+			EntryNode current = first;
 			while (current != null) {
 				if (current.key.equals(value))
 					return current;
@@ -34,7 +34,6 @@ public class EntryList extends AbstractList{
 		}
 
 		public EntryNode getSortedPosition(Object value) {
-			//MyValue val = new MyValue();
 			EntryNode current = (EntryNode) first;
 			while (current != null) {
 				if (current.key.compareTo((MyKey) value) > 0
@@ -64,14 +63,13 @@ public class EntryList extends AbstractList{
 			node = new EntryNode((MyKey)value);
 			if (first == null) {
 				first = node;
-				last = first;//System.out.println("irene");
+				last = first;
 			} else {
 				last.setNext(node);
 				node.setPrev(last);
 				node.setNext(null);
 				last = node;
 			}
-			// size++;
 		}
 		
 
@@ -101,7 +99,6 @@ public class EntryList extends AbstractList{
 				((EntryNode)node).setPrev(null);
 				((EntryNode)node).setNext(null);
 			}
-			// size--;
 		}
 
 		public String toString() {
