@@ -1,7 +1,6 @@
 package list;
 
 import map.MyKey;
-//import map.MyValue;
 
 public class EntryNode implements Node {
 	protected EntryNode next;
@@ -30,8 +29,6 @@ public class EntryNode implements Node {
 
 	public void setNext(Node node) {
 		next = (EntryNode)node;
-		//((EntryNode)node).prev = next;
-
 	}
 
 	public void setPrev(Node node) {
