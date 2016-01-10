@@ -5,7 +5,7 @@ import map.MyKey;
 public class EntryList extends AbstractList{
 	
 	protected EntryNode first;
-    protected EntryNode last;
+    	protected EntryNode last;
 		public EntryNode node = new EntryNode();
 		
 		public EntryList() {
